@@ -1,5 +1,5 @@
-Role Name
-========
+APT_SOURCES
+===========
 
 Sets /etc/apt/sources.list with default settings.
 If the release is unsupported, updates the url's to the archive repositories.
