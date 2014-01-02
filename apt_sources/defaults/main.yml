@@ -2,24 +2,24 @@
 # defaults file for apt_sources
 #
 ## main sources list location
-apt_source_dir:  /etc/apt/
-apt_source_file: sources.list
-apt_source_path: '{{ apt_source_dir + apt_source_file }}'
+apt_sources_dir:  /etc/apt/
+apt_sources_file: sources.list
+apt_sources_path: '{{ apt_sources_dir + apt_sources_file }}'
 
 ## country code
 # empty default points to main archive
-apt_source_cc: ''
+apt_sources_cc: ''
 
 ## setting for using binary and source repositories
 # deb-src item could be left out
-apt_source_types:
+apt_sources_types:
     - deb
     - deb-src
 
 ## description for source url generation
 # dists are added with a hyphen to release codename, e.g. trusty-backports
 # path is added next to release codename, e.g. squeeze/updates
-apt_source_source:
+apt_sources_source:
         Ubuntu:
             sections:
                     - 'main'
@@ -29,7 +29,7 @@ apt_source_source:
             # supported
             True:
                 current:
-                    url:    "{{ apt_source_real_cc + 'archive.ubuntu.com/ubuntu' }}"
+                    url:    "{{ apt_sources_real_cc + 'archive.ubuntu.com/ubuntu' }}"
                     path:   ""
                     dists:
                             - ''
@@ -60,7 +60,7 @@ apt_source_source:
             # supported
             True:
                 current:
-                    url:    'ftp.{{ apt_source_real_cc }}debian.org/debian'
+                    url:    'ftp.{{ apt_sources_real_cc }}debian.org/debian'
                     path:   ''
                     dists:
                             - ''

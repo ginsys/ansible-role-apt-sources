@@ -6,7 +6,7 @@
   action:
     module:     template
     src:        sources.list.j2
-    dest:       '{{ apt_source_path }}'
+    dest:       '{{ apt_sources_path }}'
     backup:     yes
   notify:
   - apt-update-cache

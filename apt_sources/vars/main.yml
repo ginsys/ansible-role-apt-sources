@@ -2,9 +2,9 @@
 # vars file for apt_sources
 
 # some logic constructs
-apt_source_real_cc: "{% if apt_source_cc in apt_source_country_codes.keys() %}{{ apt_source_cc + '.' }}{% else %}{% endif%}"
+apt_sources_real_cc: "{% if apt_sources_cc in apt_sources_country_codes.keys() %}{{ apt_sources_cc + '.' }}{% else %}{% endif%}"
 
-apt_source_release:
+apt_sources_release:
         # ubuntu
         warty:
             version:    4.10
@@ -106,7 +106,7 @@ apt_source_release:
         jessie:
             supported:  true
 
-apt_source_country_codes:
+apt_sources_country_codes:
         ac: Aceh
         al: Albania
         dz: Algeria
