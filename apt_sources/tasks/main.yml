@@ -1,0 +1,13 @@
+---
+# tasks file for apt_sources
+#
+
+- name: configure main apt sources.list
+  action:
+    module:     template
+    src:        sources.list.j2
+    dest:       '{{ apt_source_path }}'
+    backup:     yes
+  notify:
+  - apt-update-cache
+
